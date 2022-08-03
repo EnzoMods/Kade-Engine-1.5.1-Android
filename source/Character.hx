@@ -122,6 +122,23 @@ class Character extends FlxSprite
 				updateHitbox();
 				antialiasing = false;
 
+			case 'lord':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/lord_x_encore', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Idle instance 1', 24);
+				animation.addByPrefix('singUP', 'Up instance 1', 24);
+				animation.addByPrefix('singRIGHT', 'Right instance 1', 24);
+				animation.addByPrefix('singDOWN', 'Down instance 1', 24);
+				animation.addByPrefix('singLEFT', 'Left instance 1', 24);
+
+				addOffset('idle');
+				addOffset("singUP", -6, 50);
+				addOffset("singRIGHT", 0, 27);
+				addOffset("singLEFT", -10, 10);
+				addOffset("singDOWN", 0, -30);
+
+				playAnim('idle');
 			case 'dad':
 				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST', 'shared');
