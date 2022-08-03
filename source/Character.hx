@@ -124,7 +124,7 @@ class Character extends FlxSprite
 
 			case 'lord':
 				// DAD ANIMATION LOADING CODE
-				tex = Paths.getSparrowAtlas('characters/lord_x_encore', 'shared');
+				tex = Paths.getSparrowAtlas('characters/lord_x_encore');
 				frames = tex;
 				animation.addByPrefix('idle', 'Idle instance 1', 24);
 				animation.addByPrefix('singUP', 'Up instance 1', 24);
